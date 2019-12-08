@@ -1,0 +1,36 @@
+<h1> Lions Team for T-20 </h1>
+<div>
+<table class="table table-bordered table-sm">
+    <thead style="background-color:rgb(103, 126, 112)">
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Team</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr *ngFor="let play of playerStatus">
+            <td>{{ play.name }}</td>
+            <td>{{ play.team }}</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<h1> Lions List of Portables </h1>
+<div>
+    <table class="table table-bordered table-sm">
+        <thead style="background-color:rgb(103, 126, 112)">
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Team</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let play of playerStatus">
+            <tr *ngIf="play.team !
+            ='Portable'">
+                <td>{{ play.name }}</td>
+                <td>{{ play.team }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,21 @@
+<h1> Details for Top 5 Todos.</h1>
+<div>
+    <table class="table">
+        <thead style="background-color:rgb(103, 126, 112)">
+            <tr>
+                <th scope="col">To-Do Post Id</th>
+                <th scope="col">To-Do user Id</th>
+                <th scope="col">To-Do Title</th>
+                <th scope="col">Task Status</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let t of todo">
+            <tr *ngIf="t.id < 6">
+                <th scope="row">{{ t.id }}</th>
+                <td>{{ t.userId }}</td>
+                <td>{{ t.title }}</td>
+                <td>{{ t.completed }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
